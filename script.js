@@ -1,6 +1,13 @@
 let input = document.getElementById("input");
 let cube = document.getElementById("cube");
 
+// Check if the user has visited before
+if (!localStorage.getItem("visited")) {
+    window.location.reload();
+
+    // Save that they've visited
+    localStorage.setItem("visited", "true");
+}
 
 function updateCube() {
     let algorithm = input.value;
