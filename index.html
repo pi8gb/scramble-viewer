@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrambler Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://cdn.cubing.net/js/cubing/twisty"></script>
+</head>
+<body>
+    <h1>Scramble Viewer</h1>
+    <h2>Type in your scramble below!</h2>
+    <h2>Feel free to screenshot!</h2>
+    <input id="input" placeholder="The scramble here...">
+    <p>Choose the settings:</p>
+    <select id="dropdown1">
+        <option value="2x2x2">2x2</option>
+        <option value="3x3x3" selected>3x3</option>
+        <option value="4x4x4">4x4</option>
+        <option value="5x5x5">5x5</option>
+        <option value="6x6x6">6x6</option>
+        <option value="7x7x7">7x7</option>
+        <option value="pyraminx">Pyraminx</option>
+        <option value="megaminx">Megaminx</option>
+        <option value="clock">Clock</option>
+        <option value="square1">Square-1</option>
+        <option value="skewb">Skewb</option>
+        <option value="fto">FTO</option>
+        <option value="kilominx">Kilominx</option>
+        <option value="gigaminx">Gigaminx</option>
+        <option value="redi_cube">Redi Cube</option>
+        <option value="baby_fto">2x2 FTO</option>
+    </select>
+    <select id="dropdown2">
+        <option value="2D">2D</option>
+        <option value="3D" selected>3D</option>
+    </select>
+    <p id="algorithmP"></p>
+    <div class="div">
+    <twisty-player
+    id="cube"
+    alg=""
+    puzzle="2x2x2"
+    background="none"
+    hint-facelets="none"
+    control-panel="none"
+    visualization="2D"></twisty-player>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
